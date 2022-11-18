@@ -23,7 +23,7 @@ function findPinkElephantsByTimestreet(songs) {
  * @returns {Object} A single object.
  */
 function findFirstSongUnderThreeMinutes(songs) {
-  return songs.filter((song)=> song.runtimeInSeconds < 180).find((song) => song.title)
+  return songs.find((song) => song.runtimeInSeconds < 180)
 }
 
 /**
@@ -32,7 +32,7 @@ function findFirstSongUnderThreeMinutes(songs) {
  * @returns {Object} A single object.
  */
 function findFirstTitleTrack(songs) {
-  return songs.filter((song) => song.title === song.album).find((song) => song.title)
+  return songs.find((song) => song.title === song.album)
 }
 
 module.exports = {
